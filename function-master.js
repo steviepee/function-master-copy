@@ -4,6 +4,13 @@
 
 function objectValues(object) {
     //  Should take an object and return its values in an array
+    //create a storage array
+    let sto = [];
+    //access keys and values in the array
+    for (var key in object) {
+        //push the values to the storage array
+        sto.push(object[key]);
+    }
 } 
 
 //////////////////////////////////////////////////////////////////////
@@ -12,6 +19,15 @@ function objectValues(object) {
 
 function keysToString(object) {
     //Should take an object and return all its keys in a string each separated with a space
+    //create a storage array
+    let sto = [];
+    //access keys and values in the array
+    for (var key in object) {
+        //push the keys to the storage array
+        sto.push(object.key);
+    }
+    //return the array as a string with spaces between
+    return sto.join(' ');
 
 }
 
@@ -21,7 +37,22 @@ function keysToString(object) {
 
 function valuesToString(object) {
     //Should take an object and return all its string values in a string each separated with a space
-    
+    //create a storage array
+    sto = [];
+    //create another storage array
+    rage = [];
+    //access keys and values in the array
+    for (var key in object) {
+        //push the values to the storage array
+        sto.push(object[key]);
+    }
+    //iterate over the array
+    for (let i = 0; i < sto.length; i++) {
+        //if the value is a string, add it to rage
+        typeof sto[i] === 'string' ? rage.push(sto[i]) : console.log('waymin!');
+    }
+    //return the second storage array as a string with spaces
+    return rage.join(' ');
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -30,7 +61,17 @@ function valuesToString(object) {
 
 function arrayOrObject(collection) {
     //Should take one argument and return 'array' if its an array and 'object' if its an object
-    
+    //if typeof comes to object and the argument isnt null, it's either an array or an object.. if so
+    if (typeof collection === 'object' && collection !== null) {
+        //check to see if it's an array. if it is
+        if (Array.isArray(collection)) {
+            //return array
+            return 'array';
+            //if not, return object
+        }else {
+            return 'object';
+        }
+    }
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -39,6 +80,11 @@ function arrayOrObject(collection) {
 
 function capitalizeWord(string) {
     //Should take a string of one word, and return the word with its first letter capitalized
+    //isolate the first letter of the string. Give a variable to that uppercased letter
+    let x = string[0].toUpperCase();
+    //return that letter along with the rest of the string
+    return x + string.substring(1, string.length);
+
     
 }
 
@@ -48,6 +94,12 @@ function capitalizeWord(string) {
 
 function capitalizeAllWords(string) {
     // Should take a string of words and return a string with all the words capitalized
+    //create a storage array
+    let sto = [];
+    //push the string into the storage array
+    sto.push(string);
+    //seperate each string into individual words
+
     
 }
 
