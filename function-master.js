@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////////////
 
 function objectValues(object) {
-    // code
+    //  Should take an object and return its values in an array
 } 
 
 //////////////////////////////////////////////////////////////////////
@@ -11,6 +11,7 @@ function objectValues(object) {
 //////////////////////////////////////////////////////////////////////
 
 function keysToString(object) {
+    //Should take an object and return all its keys in a string each separated with a space
 
 }
 
@@ -19,6 +20,7 @@ function keysToString(object) {
 //////////////////////////////////////////////////////////////////////
 
 function valuesToString(object) {
+    //Should take an object and return all its string values in a string each separated with a space
     
 }
 
@@ -27,6 +29,7 @@ function valuesToString(object) {
 //////////////////////////////////////////////////////////////////////
 
 function arrayOrObject(collection) {
+    //Should take one argument and return 'array' if its an array and 'object' if its an object
     
 }
 
@@ -35,6 +38,7 @@ function arrayOrObject(collection) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeWord(string) {
+    //Should take a string of one word, and return the word with its first letter capitalized
     
 }
 
@@ -43,6 +47,7 @@ function capitalizeWord(string) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeAllWords(string) {
+    // Should take a string of words and return a string with all the words capitalized
     
 }
 
@@ -51,6 +56,7 @@ function capitalizeAllWords(string) {
 //////////////////////////////////////////////////////////////////////
 
 function welcomeMessage(object) {
+    //Should take an object with a name property and return 'Welcome <Name>!'
 
 }
 
@@ -59,6 +65,7 @@ function welcomeMessage(object) {
 //////////////////////////////////////////////////////////////////////
 
 function profileInfo(object) {
+    //Should take an object with a name an a species and return '<Name> is a <Species>'
 
 }
 
@@ -67,6 +74,7 @@ function profileInfo(object) {
 //////////////////////////////////////////////////////////////////////
 
 function maybeNoises(object) {
+    // Should take an object, if this object has a noises array return them as a string separated by a space, if there are no noises return 'there are no noises'
 
 }
 
@@ -75,6 +83,7 @@ function maybeNoises(object) {
 //////////////////////////////////////////////////////////////////////
 
 function hasWord(string, word) {
+    //Should take a string of words and a word and return true if <word> is in <string of words>, otherwise return false.
 
 }
 
@@ -83,6 +92,7 @@ function hasWord(string, word) {
 //////////////////////////////////////////////////////////////////////
 
 function addFriend (name, object) {
+    //Should take a name and an object and add the name to the object's friends array then return the object
 
 }
 
@@ -91,6 +101,7 @@ function addFriend (name, object) {
 //////////////////////////////////////////////////////////////////////
 
 function isFriend(name, object) {
+    //Should take a name and an object and return true if <name> is a friend of <object> and false otherwise
 
 }
 
@@ -99,6 +110,7 @@ function isFriend(name, object) {
 //////////////////////////////////////////////////////////////////////
 
 function nonFriends(name, array) {
+    //Should take a name and a list of people, and return a list of all the names that <name> is not friends with
 
 }
 
@@ -107,6 +119,7 @@ function nonFriends(name, array) {
 //////////////////////////////////////////////////////////////////////
 
 function updateObject(object, key, value) {
+    //Should take an object, a key and a value. Should update the property <key> on <object> with new <value>. If <key> does not exist on <object> create it.
 
 }
 
@@ -115,6 +128,7 @@ function updateObject(object, key, value) {
 //////////////////////////////////////////////////////////////////////
 
 function removeProperties(object, array) {
+    // Should take an object and an array of strings. Should remove any properties on <object> that are listed in <array>
 
 }
 
@@ -123,6 +137,7 @@ function removeProperties(object, array) {
 //////////////////////////////////////////////////////////////////////
 
 function dedup(array) {
+    //Should take an array and return an array with all the duplicates removed
 
 }
 
