@@ -20,7 +20,7 @@
   
       yay();
   
-      assert.equal(outside_the_function, "can you see me");
+      assert.equal(outside_the_function, "can you see me?");
     });
   
     QUnit.test("Function Parameters become scoped to the function.", function(assert){
@@ -80,7 +80,7 @@
       }
       yay();
   
-      assert.equal(peanuts, "roasted");
+      assert.equal(peanuts, 300);
     });
   
     QUnit.test("Variables created with var in a funtion are re-created each time", function(assert){
@@ -93,11 +93,11 @@
       }
   
       yay();
-      assert.equal(this.counter, 10);
+      assert.equal(this.counter, undefined);
       yay();
-      assert.equal(this.counter, 11);
+      assert.equal(this.counter, undefined);
       yay();
-      assert.equal(this.counter, 12);
+      assert.equal(this.counter, undefined);
     });
   
     QUnit.test("Inner scope can access outer scope", function(assert){
