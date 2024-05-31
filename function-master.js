@@ -111,8 +111,10 @@ function capitalizeAllWords(string) {
 
 function welcomeMessage(object) {
     //Should take an object with a name property and return 'Welcome <Name>!'
+   //set a variable for the first letter of the name property of the object capitalized
+   let x = object.name[0].toUpperCase();
     //if arg has a name property, return welcome 'that name'. Otherwise, just say hi
-    return object.name ? 'welcome' + ' ' + object.name : 'Hey yoooouuu'
+    return object.name ? 'Welcome' + ' ' + x + object.name.substring(1, object.name.length) + '!' : 'Hey yoooouuu'
 
 }
 
