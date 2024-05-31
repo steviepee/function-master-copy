@@ -141,6 +141,8 @@ return x + nam.substring(1, nam.length) + ' is a ' + y + spec.substring(1, spec.
 
 function maybeNoises(object) {
     // Should take an object, if this object has a noises array return them as a string separated by a space, if there are no noises return 'there are no noises'
+    //if object has a noises value that is an array with >0 noises, return it as a string with spaces, if not, return 'there are no noises'
+    return Array.isArray(object.noises) && object.noises.length ? object.noises.join(' ') : 'there are no noises';
 
 }
 
