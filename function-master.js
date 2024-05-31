@@ -100,12 +100,9 @@ function capitalizeAllWords(string) {
         const x = split[i][0].toUpperCase();
         //for each word, add the new letter to the beginning of the rest of the word. Push that word into the storage array
         sto.push(x + split[i].substring(1, split[i].length));
-
     }
     //return the new storage array as a string with the words spaced
-    return sto.join(' ');
-
-    
+    return sto.join(' ');  
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -114,6 +111,8 @@ function capitalizeAllWords(string) {
 
 function welcomeMessage(object) {
     //Should take an object with a name property and return 'Welcome <Name>!'
+    //if arg has a name property, return welcome 'that name'. Otherwise, just say hi
+    return object.name ? 'welcome' + ' ' + object.name : 'Hey yoooouuu'
 
 }
 
