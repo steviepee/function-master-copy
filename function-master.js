@@ -99,7 +99,7 @@ function capitalizeAllWords(string) {
     //push the string into the storage array
     sto.push(string);
     //seperate each string into individual words
-
+var stuff = []
     
 }
 
