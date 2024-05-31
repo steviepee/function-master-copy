@@ -115,7 +115,7 @@ function welcomeMessage(object) {
    let x = object.name[0].toUpperCase();
     //if arg has a name property, return welcome 'that name'. Otherwise, just say hi
     return object.name ? 'Welcome' + ' ' + x + object.name.substring(1, object.name.length) + '!' : 'Hey yoooouuu'
-
+j
 }
 
 //////////////////////////////////////////////////////////////////////
