@@ -9,8 +9,9 @@ function objectValues(object) {
     //access keys and values in the array
     for (var key in object) {
         //push the values to the storage array
-        sto.push(object[key]);
+    sto.push(object[key]);
     }
+    return sto;
 } 
 
 //////////////////////////////////////////////////////////////////////
@@ -19,15 +20,10 @@ function objectValues(object) {
 
 function keysToString(object) {
     //Should take an object and return all its keys in a string each separated with a space
-    //create a storage array
-    let sto = [];
-    //access keys and values in the array
-    for (var key in object) {
-        //push the keys to the storage array
-        sto.push(object.key);
-    }
-    //return the array as a string with spaces between
-    return sto.join(' ');
+    //create a variable of the keys as a string separated by a space
+    let space = Object.keys(object).join(' ');
+    //return that variable
+    return space;
 
 }
 
@@ -96,10 +92,19 @@ function capitalizeAllWords(string) {
     // Should take a string of words and return a string with all the words capitalized
     //create a storage array
     let sto = [];
-    //push the string into the storage array
-    sto.push(string);
-    //seperate each string into individual words
-var stuff = []
+    //seperate each string into individual words with their own indexes. hold it with a variable
+    let split = string.split(' ');
+    //iterate over each word
+    for (i = 0; i < split.length; i++) {
+        //in each iteration, set a variable for the first letter capitalized
+        const x = split[i][0].toUpperCase();
+        //for each word, add the new letter to the beginning of the rest of the word. Push that word into the storage array
+        sto.push(x + split[i].substring(1, split[i].length));
+
+    }
+    //return the new storage array as a string with the words spaced
+    return sto.join(' ');
+
     
 }
 
