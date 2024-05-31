@@ -172,6 +172,10 @@ function hasWord(string, word) {
 
 function addFriend (name, object) {
     //Should take a name and an object and add the name to the object's friends array then return the object
+    //push the intended name into the object's current friend's array
+    object.friends.push(name);
+    //return the new object
+    return object;
 
 }
 
