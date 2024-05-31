@@ -123,8 +123,16 @@ function welcomeMessage(object) {
 //////////////////////////////////////////////////////////////////////
 
 function profileInfo(object) {
-    //Should take an object with a name an a species and return '<Name> is a <Species>'
-
+    
+//Should take an object with a name an a species and return '<Name> is a <Species>'
+//create variables for the values of both keys
+let nam = object.name;
+let spec = object.species;
+//create a variable for the name and species property's first letter capitalized
+let x = nam[0].toUpperCase();
+let y = spec[0].toUpperCase();
+//return the specified phrase with the name and species property properly capitalized
+return x + nam.substring(1, nam.length) + ' is a ' + y + spec.substring(1, spec.length); 
 }
 
 //////////////////////////////////////////////////////////////////////
