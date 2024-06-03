@@ -185,7 +185,19 @@ function addFriend (name, object) {
 
 function isFriend(name, object) {
     //Should take a name and an object and return true if <name> is a friend of <object> and false otherwise
-
+    //if the object has no friends array, give it one
+    object.friends ? console.log('on it') : object.friends = [];
+    //create a variable for the friends array in said object
+    let check = object.friends;
+    //iterate over the friends array
+    for (let i = 0; i < check.length; i++) {
+        //if the name matches any of the friends in the array
+        if (name === check[i]) {
+            //return true
+            return true;
+        }//if nothing in the loop returns true
+    }//return false
+    return false;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -194,6 +206,36 @@ function isFriend(name, object) {
 
 function nonFriends(name, array) {
     //Should take a name and a list of people, and return a list of all the names that <name> is not friends with
+    //create two storage arrays
+    let sto = [];
+    let rage= [];
+    //iterate over the array of objects
+    for (let i = 0; i < array.length; i++) {
+        //create a variable for the current object we're looking at
+        const obj = array[i];
+        //and a variable for that object's friends array
+        const buds = obj.friends
+        //if the names are the same
+        if (name === obj.name) {
+            //place object in second storage array
+            rage.push(obj);
+            //if not
+        } else {
+            //iterate over the object's array of friends names
+            for (let x = 0; x < buds.length; x++) {
+                //check each name against the argument. If they match
+                if (buds[x] === name) {
+                    //push it into the second container
+                    rage.push(obj);
+                }//if no names match the given name
+                //push the name into the storage array
+                sto.push(obj.name);
+            }
+        }
+    }
+    //return the storage array
+    return sto;
+
 
 }
 
@@ -203,6 +245,10 @@ function nonFriends(name, array) {
 
 function updateObject(object, key, value) {
     //Should take an object, a key and a value. Should update the property <key> on <object> with new <value>. If <key> does not exist on <object> create it.
+    //have the value of the property in this object become the specified value
+    object[key] = value;
+// return the object
+    return object;
 
 }
 
