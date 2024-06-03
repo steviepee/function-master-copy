@@ -273,7 +273,22 @@ function removeProperties(object, array) {
 
 function dedup(array) {
     //Should take an array and return an array with all the duplicates removed
-
+// iterate over the array
+for (i = 0; i < array.length; i++) {
+    //iterate over the array again
+    for (x = 0; x < array.length; x++) {
+        //if they're not referring to the same index
+        if (i !== x) {
+        //if any have an equal value
+        if (array[i] === array[x]) {
+            //remove the duplicate
+            array.splice(x, 1);
+        }
+        }
+    }
+}
+//return the array
+return array;
 }
 
 //////////////////////////////////////////////////////////////////////
