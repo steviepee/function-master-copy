@@ -284,7 +284,7 @@ for (i = 0; i < array.length; i++) {
             //remove the duplicate
             array.splice(x, 1);
         }
-        }
+        } 
     }
 }
 //return the array
