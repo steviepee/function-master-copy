@@ -258,6 +258,12 @@ function updateObject(object, key, value) {
 
 function removeProperties(object, array) {
     // Should take an object and an array of strings. Should remove any properties on <object> that are listed in <array>
+    //iterate over the array
+    for (let i = 0; i < array.length; i++) {
+        //for each property listed in the array, remove it from the object
+        delete object[array[i]];
+    }//return the object
+    return object;
 
 }
 
