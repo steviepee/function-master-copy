@@ -208,31 +208,19 @@ function nonFriends(name, array) {
     //Should take a name and a list of people, and return a list of all the names that <name> is not friends with
     //create two storage arrays
     let sto = [];
-    let rage= [];
     //iterate over the array of objects
     for (let i = 0; i < array.length; i++) {
         //create a variable for the current object we're looking at
         const obj = array[i];
         //and a variable for that object's friends array
         const buds = obj.friends
-        //if the names are the same
-        if (name === obj.name) {
-            //place object in second storage array
-            rage.push(obj);
-            //if not
-        } else {
-            //iterate over the object's array of friends names
-            for (let x = 0; x < buds.length; x++) {
-                //check each name against the argument. If they match
-                if (buds[x] === name) {
-                    //push it into the second container
-                    rage.push(obj);
-                }//if no names match the given name
-                //push the name into the storage array
-                sto.push(obj.name);
+        //if the names are not the same
+        if (name !== obj.name) {//check if their name is on the objects friends list. If not...
+            if (!buds.includes(name)) {//push it into the storage array
+                sto.push(obj.name)
             }
         }
-    }
+               }           //check each name against the argumen
     //return the storage array
     return sto;
 
